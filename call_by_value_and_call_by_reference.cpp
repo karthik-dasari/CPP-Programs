@@ -8,13 +8,13 @@ void swap_callbyvalue(int a,int b)
     b=c;
     cout<<"a="<<a<<" b="<<b<<endl;
 }
-void swap_callbyref(int *m,int *n)
+void swap_callbyref(int &m,int &n)
 {
     int c;
-    c=*m;
-    *m=*n;
-    *n=c;
-    cout<<"a="<<*m<<" b="<<*n<<endl;;
+    c=m;
+    m=n;
+    n=c;
+    cout<<"a="<<m<<" b="<<n<<endl;;
 }
 int main()
 {
@@ -23,5 +23,5 @@ int main()
     cin>>a>>b;
     cout<<"a="<<a<<" b="<<b<<endl;
     swap_callbyvalue(a,b);
-    swap_callbyref(&a,&b);
+    swap_callbyref(a,b);
 }
